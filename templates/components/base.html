@@ -1,0 +1,234 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ECU | Програмный автосервис</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <div class="logo">ECU<span>Auto Service</span></div>
+
+            <nav class="nav">
+                <a href="/services" class="nav__item active">Услуги</a>
+                <a href="/works" class="nav__item">Работы</a>
+                <a href="/about" class="nav__item">О компании</a>
+                <a href="/offers" class="nav__item">Акции</a>
+                <a href="/contact" class="nav__item">Контакты</a>
+            </nav>
+
+            <div class="phone">+996 559 40 11 11</div>
+        </div>
+    </header>
+
+    <section class="section1">
+        <div class="container">
+            <div class="text_img_global">
+                <div class="text">
+                    <h1> Премиальное обслуживание вашего автомобиля</h1>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary">Запись в сервис</a>
+                    <a href="#" class="btn btn-outline">Консультация</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services" id="services" >
+        <div class="container">
+
+            <div class="container services__grid">
+
+                <div class="service-card">
+                    <div class="card-head">
+                        <h3>Добавление мощности (Stage)</h3>
+                        <span class="badge">АКЦИЯ</span>
+                    </div>
+                    <p class="price">от 7000 сом</p>
+                    <div class="card-image img-wrap"></div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-head">
+                        <h3>Русификация</h3>
+                    </div>
+                    <p class="price">от 8000 сом</p>
+                    <div class="card-image img-repair"></div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-head">
+                        <h3>Диагностика</h3>
+                        <span class="badge">АКЦИЯ</span>
+                    </div>
+                    <p class="price">от 500 сом</p>
+                    <div class="card-image img-disks"></div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-head">
+                        <h3>Отключение Ошибок</h3>
+                        <span class="badge">АКЦИЯ</span>
+                    </div>
+                    <p class="price">от 1000 сом</p>
+                    <div class="card-image img-exhaust"></div>
+                </div>
+
+                <div class="service-card service-card--red">
+                    <div class="card-head">
+                        <h3>Привязывание деталей к машине</h3>
+                        <span class="badge badge-dark">АКЦИЯ</span>
+                    </div>
+                    <p class="price">от 3400 сом</p>
+                    <div class="card-image img-body"></div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-head">
+                        <h3>Popbang Попкорн</h3>
+                    </div>
+                    <p class="price">от 5000 сом</p>
+                    <div class="card-image img-wash"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section2">
+        <div class="projects">
+            <div class="container">
+
+                <div class="projects__head">
+                    <h2>Избранные работы</h2>
+
+                    <div class="projects__nav">
+                        <button class="nav-btn nav-btn--light">‹</button>
+                        <button class="nav-btn nav-btn--red">›</button>
+                    </div>
+                </div>
+
+                <div class="projects__list">
+
+                    <article class="project-card">
+                        <div class="project-image img-1">
+                            <span class="photos">3 фото</span>
+                        </div>
+                        <h3>Бронирование автомобиля пленкой Illumar</h3>
+                        <a href="#">Подробнее об услуге →</a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image img-2">
+                            <span class="photos">5 фото</span>
+                        </div>
+                        <h3>Тюнинг выхлопной системы на Porsche GT</h3>
+                        <a href="#">Подробнее об услуге →</a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image img-3">
+                            <span class="photos">3 фото</span>
+                        </div>
+                        <h3>Техническое обслуживание Chevrolet Camaro</h3>
+                        <a href="#">Подробнее об услуге →</a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image img-4">
+                            <span class="photos">3 фото</span>
+                        </div>
+                        <h3>Детейлинг-мойка с глубокой химчисткой салона</h3>
+                        <a href="#">Подробнее об услуге →</a>
+                    </article>
+
+                </div>
+
+                <div class="projects__social">
+                    <span>Присоединяйтесь к нам в социальных сетях:</span>
+                    <a href="https://www.tiktok.com/@ecu.avto.service.osh?_r=1&_t=ZS-92xpa7cbkV3" class="social-btn">Tik Tok</a>
+                    <a href="https://www.instagram.com/ecu.avto.service.osh?igsh=bGdnYjh4MXBja3Ey" class="social-btn">Instagram</a>
+                    <a href="#" class="social-btn">YouTube</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="why-ecu">
+    <div class="container why-ecu__inner">
+
+        <!-- LEFT -->
+        <div class="why-ecu__info">
+            <h2>Почему ECU Avto Service Osh?</h2>
+
+            <p class="why-ecu__text">
+                ECU Avto Service Osh — это профессиональный сервис по диагностике,
+                чип-тюнингу и ремонту электронных систем автомобиля.
+                Мы повышаем мощность, экономию и надежность вашего авто.
+            </p>
+
+            <div class="why-ecu__buttons">
+                <a href="#" class="btn btn-white">Запись в сервис</a>
+                <a href="#" class="btn btn-outline-white">Консультация</a>
+            </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="why-ecu__features">
+
+            <div class="feature">
+                <div class="icon">⚙️</div>
+                <h4>ДИАГНОСТИКА ECU</h4>
+                <p>
+                    Полная компьютерная диагностика.
+                    Поиск и устранение ошибок электронных блоков.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🚀</div>
+                <h4>ЧИП-ТЮНИНГ</h4>
+                <p>
+                    Увеличение мощности и крутящего момента
+                    без вреда для двигателя.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">💰</div>
+                <h4>ОПТИМИЗАЦИЯ РАСХОДА</h4>
+                <p>
+                    Снижение расхода топлива
+                    за счёт грамотной настройки ECU.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🛠️</div>
+                <h4>ПРОФЕССИОНАЛЬНЫЙ ОПЫТ</h4>
+                <p>
+                    Большой опыт работы с бензиновыми
+                    и дизельными автомобилями.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+</body>
+
+</html>
