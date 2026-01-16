@@ -1,0 +1,50 @@
+{% extends 'components/base.html' %} 
+{% load static %} 
+ 
+{% block title %}Main Page{% endblock %} 
+ 
+ 
+
+ 
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/account.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<form action="/profile" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container">
+
+
+        <div class="navigation65">
+
+            <div class="global_inp">
+                <h1 class="word"> Change user </h1>
+
+
+                <input value="{{request.user.username}}" placeholder="username" name="username" type="text">
+                <input value="{{request.user.first_name}}" placeholder="first_name" name="first_name" type="text">
+                <input value="{{request.user.last_name}}" placeholder="last_name " placeholder="last_name" name="author"
+                    type="text">
+                <button type="submit">Create</button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</form>
+
+
+{% endblock %}
