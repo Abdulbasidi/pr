@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #0f0f0f;
+    color: #fff;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-card {
+    background: #161616;
+    padding: 35px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(255, 200, 0, 0.15);
+}
+
+.booking-card h2 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    color: #ffc800;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 13px;
+    color: #ccc;
+}
+
+select,
+input[type="date"],
+input[type="time"] {
+    background: #0f0f0f;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+select:focus,
+input:focus {
+    outline: none;
+    border-color: #ffc800;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg, #ffc800, #ffae00);
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(255, 200, 0, 0.3);
+}
+
+
+.booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.booking-item {
+    background: #0f0f0f;
+    border: 1px solid #2a2a2a;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.booking-item .service {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffc800;
+}
+
+.booking-item .datetime {
+    font-size: 13px;
+    color: #bbb;
+    margin-top: 4px;
+}
+
+.empty {
+    text-align: center;
+    color: #888;
+    margin: 20px 0;
+}
+
+.back-btn {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: #1f1f1f;
+    color: #ffc800;
+    text-decoration: none;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #ffc800;
+    color: #000;
+}

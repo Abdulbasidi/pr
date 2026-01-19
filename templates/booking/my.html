@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои записи | ECU Auto Service Osh</title>
+    <link rel="stylesheet" href="{% static 'css/booking.css' %}">
+</head>
+<body>
+
+<div class="page">
+    <div class="booking-card">
+        <h2>Мои записи</h2>
+        <p class="subtitle">ECU Auto Service Osh</p>
+
+        {% if bookings %}
+            <div class="booking-list">
+                {% for b in bookings %}
+                    <div class="booking-item">
+                        <div class="service">
+                            {{ b.get_service_display }}
+                        </div>
+                        <div class="datetime">
+                            {{ b.date }} · {{ b.time }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="empty">Записей пока нет</p>
+        {% endif %}
+
+        <a href="/booking/my/" class="back-btn">+ Новая запись</a>
+    </div>
+</div>
+
+</body>
+</html>
