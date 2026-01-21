@@ -1,6 +1,8 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Booking
+from .serializers import BookingSerializer
+
 
 
 class ListBooks(APIView):
@@ -37,3 +39,17 @@ class ListBooks(APIView):
             'id': booking.id
         })
     
+
+
+
+
+def post(self, request):
+    serializer = BookingSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+
+    booking = serializer.save(user=request.user)
+
+    return Response({
+        "message": "Запись создана",
+        "id": booking.id
+    })
