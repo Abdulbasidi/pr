@@ -3,7 +3,10 @@ from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Booking
+from .pagination import BookingPagination
 from .serializers import BookingSerializer, BookingUpdateSerializer
+from rest_framework.mixins import CreateModelMixin,ListModelMixin,UpdateModelMixin,DestroyModelMixin,RetrieveModelMixin
+from rest_framework.viewsets import GenericViewSet
 
 
 
@@ -45,6 +48,7 @@ class DetailBooking(APIView):
         booking.save()
 
         booking_data = BookingSerializer(booking)
+        pagination = BookingPagination()
         return Response(booking_data.data)
 
     def delete(self, request, id, format=None):
@@ -53,5 +57,9 @@ class DetailBooking(APIView):
         return Response({
             "detail": f"Удалён booking с id: {id}"
         })
+    
 
 
+class BookingViewSet(CreateModelMixin,ListModelMixin,UpdateModelMixin,DestroyModelMixin,RetrieveModelMixin,GenericViewSet):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializer
